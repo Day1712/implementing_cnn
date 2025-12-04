@@ -208,7 +208,6 @@ __marimo__/
 
 
 ### added
-data/
 mnist-varres.tgz
 *.pth
 *.pt
