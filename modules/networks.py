@@ -18,3 +18,21 @@ class Net(nn.Module):
         x = torch.flatten(x, 1) # flatten all dimensions except batch
         x = self.fc1(x)
         return x
+    
+
+class VarResNet(nn.Module):
+    def __init__(self, n_channels=64):
+        super().__init__()
+        self.conv1 = nn.Conv2d(1, 16, 3, padding=1, stride=1)
+        self.conv2 = nn.Conv2d(16, 32, 3, padding=1, stride=1)
+        self.conv3 = nn.Conv2d(32, n_channels, 3, padding=1, stride=1)
+        self.fc1 = nn.Linear(n_channels, 10)
+
+    def forward(self, x):
+        x = F.max_pool2d(F.relu(self.conv1(x)), 2)
+        x = F.max_pool2d(F.relu(self.conv2(x)), 2)
+        x = F.max_pool2d(F.relu(self.conv3(x)), 2)
+        x = x.amax(dim=(2, 3)) 
+        
+        x = self.fc1(x)
+        return x

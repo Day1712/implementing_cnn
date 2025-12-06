@@ -1,7 +1,7 @@
 # implementing_cnn
 
 ## Structure
-I asked chat to make us a possible structure for us, what do you think? I added the empty files already to avoid conflicts but please feel free to change and improve!
+
 
 ```
 root/
@@ -12,7 +12,7 @@ root/
 │   ├── convolution.py     # STUDENT 1: Custom Conv2DFunc & unfold (Q1-6)
 │   ├── networks.py        # STUDENT 2 & 3: FixedCNN (Q7) & VarResNet (Q15)
 │   └── data_loader.py     # STUDENT 3: Manual batching logic for Var-Res (Q14) 
-├── scripts/               # Optional: Good for long training runs
+├── scripts/               # Optional: 
 │   ├── train_baseline.py  # Run the FixedCNN training (Student 2)
 │   └── train_var_res.py   # Run the Variable Resolution training (Student 3)
 └── notebooks/             # Individual Workspaces for Analysis/Plots
