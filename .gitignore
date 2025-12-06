@@ -209,6 +209,7 @@ __marimo__/
 
 ### added
 mnist-varres.tgz
+mnist-varres/
 *.pth
 *.pt
 *.ckpt
